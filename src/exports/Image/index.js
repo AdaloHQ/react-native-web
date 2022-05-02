@@ -40,7 +40,7 @@ const resolveAssetDimensions = source => {
   if (typeof source === 'number') {
     const { height, width } = getAssetByID(source);
     return { height, width };
-  } else if (typeof source === 'object') {
+  } else if (source != null && !Array.isArray(source) && typeof source === 'object') {
     const { height, width } = source;
     return { height, width };
   }
