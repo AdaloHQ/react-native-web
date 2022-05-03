@@ -97,7 +97,7 @@ var resolveAssetDimensions = function resolveAssetDimensions(source) {
         width = _getAssetByID.width;
 
     return { height: height, width: width };
-  } else if (typeof source === 'object') {
+  } else if (source != null && !Array.isArray(source) && typeof source === 'object') {
     var _height = source.height,
         _width = source.width;
 
